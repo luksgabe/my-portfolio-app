@@ -1,0 +1,39 @@
+import { createGlobalStyle } from "styled-components";
+
+export default createGlobalStyle`
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+    }
+
+    html, body, #root {
+    max-height: 100vh;
+    max-width: 100vw;
+
+    width: 100%;
+    height: 100%;
+
+    color: #242424;
+    font-family: Roboto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  *, button, input {
+    border: 0;
+    background: none;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif;
+  }
+  html {
+    background: var(--pattern);
+  }
+  :root {
+  --primary: #2C3333;
+  --secondary: #395B64;
+  --tertiary: #A5C9CA;
+  --pattern: #E7F6F2
+  --white: #D9D9D9;
+  --gray: #7A7A7A;
+  }
+`;
