@@ -1,7 +1,9 @@
 import Head from 'next/head';
+import { About } from '../components/About';
 import { Presentation } from '../components/Presentation/Index';
+import { Navbar } from '../components/Shared/Navbar/Index';
 import Template from '../components/Shared/Template';
-import GlobalStyle from '../styles/global';
+
 
 export default function Home() {
   return (
@@ -9,11 +11,13 @@ export default function Home() {
       <Head>
           <title>Lucas Gabriel</title>
       </Head>
+      <header>
+        <Navbar />
+      </header>
       <Template>
-        <Presentation />
+        <Presentation/>
+        <About/>
       </Template>
-      
-      <GlobalStyle />
     </>
   )
 }

@@ -31,6 +31,7 @@ const PageContainer = styled.div`
 
 const HText = css`
 	display: flex;
+	font-family: Roboto;
 	font-weight: 900;
 	color: var(--pattern);
 `;

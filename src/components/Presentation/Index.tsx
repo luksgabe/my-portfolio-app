@@ -1,8 +1,11 @@
 import { H1, H2, HomeParallax } from "./styled"
 import { useRef, useState, useEffect } from "react";
+import { useText } from "../../contexts/TextContext";
 
 export const Presentation = () => {
-  
+  const { titles } = useText();
+
+
   const config = {
     duration: 1000
   }
@@ -24,9 +27,9 @@ export const Presentation = () => {
   }, []); 
 
   return (
-    <HomeParallax>
+    <HomeParallax id="Home" title="Home Section" aria-label="Seção Inicial">
       <H1 ref={h1Ref}>Lucas Gabriel</H1>
-      <H2 ref={h2Ref}>Desenvolvedor Full Stack</H2>
+      <H2 ref={h2Ref}>{titles.subtitleHome}</H2>
     </HomeParallax>
 
   )

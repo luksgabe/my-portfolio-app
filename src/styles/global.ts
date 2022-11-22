@@ -5,7 +5,6 @@ export default createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        
     }
 
     html, body, #root {
@@ -14,6 +13,7 @@ export default createGlobalStyle`
 
     width: 100%;
     height: 100%;
+    scroll-behavior: smooth;
 
     color: #242424;
     font-family: Roboto;

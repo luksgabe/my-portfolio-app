@@ -34,6 +34,8 @@ const GlobalParallax = css`
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  z-index: 0;
+
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -moz-background-size: cover;
