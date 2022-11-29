@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { About } from '../components/About';
 import { Presentation } from '../components/Presentation/Index';
+import { Services } from '../components/Services';
 import { Navbar } from '../components/Shared/Navbar/Index';
 import Template from '../components/Shared/Template';
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Template>
         <Presentation/>
         <About/>
+        <Services/>
       </Template>
     </>
   )

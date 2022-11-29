@@ -4,6 +4,7 @@ import { useText } from "../../contexts/TextContext";
 
 export const Presentation = () => {
   const { titles } = useText();
+  // const { animation } = useScrollReveal();
 
 
   const config = {
@@ -12,14 +13,15 @@ export const Presentation = () => {
 
   const h1Ref = useRef(null);
   const h2Ref = useRef(null);
-  const [configScrollReveal, setConfigScrollReveal] = useState<any>(config);
 
   useEffect(() => {
+    // const listRef = [h1Ref, h2Ref];
+    // animation(listRef, config);
     async function animate() {
       if (h1Ref.current && h2Ref.current) {
         const sr = (await import("scrollreveal")).default;
-        sr().reveal(h1Ref.current, configScrollReveal);
-        sr().reveal(h2Ref.current, configScrollReveal);
+        sr().reveal(h1Ref.current, config);
+        sr().reveal(h2Ref.current, config);
       }
     }
 

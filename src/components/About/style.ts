@@ -2,8 +2,8 @@ import styled, { css } from "styled-components";
 
 import { H1 as H1Template, Container as TemplateContainer } from "../../styles/template";
 
-interface Props {
-  size: number;
+interface ScrollProps {
+  scrollRevealEvent?: boolean;
 }
 
 export {
@@ -56,6 +56,7 @@ const Img = styled.img`
   width: 255px;
   height: 285px;
   border-radius:150px;
+  visibility: hidden;
 
   @media (max-width: 300px) {
     width: 70%;
@@ -64,11 +65,12 @@ const Img = styled.img`
 `;
 
 const Content = styled.div`
-  display: -webkit-flex;
+  display: flex;
   flex-direction: column;
   width: 70%;
   justify-content: center;
   padding: 0px 0px 0px 20px;
+  visibility: hidden;
   
   @media (max-width: 600px) {
     width: 100% !important;
