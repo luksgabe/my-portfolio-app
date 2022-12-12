@@ -45,6 +45,10 @@ const Logo = styled.a<NavProps>`
   color: ${(props) => (props.changeNavProps ? '#2C3333' : '#E7F6F2')};
   font-size: 2rem;
   font-weight: bold;
+
+  @media(max-width: 300px) {
+    visibility: hidden;
+  }
 `;
 
 const NavMenu = styled.ul<NavProps>`

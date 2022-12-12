@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export {
 	Wrapper,
 	Main,
-	PageContainer,
+	Container,
 	H1,
 	H2,
 	H3,
@@ -22,18 +22,22 @@ const Main = styled.main`
 	background-color: #E7F6F2;
 `;
 
-const PageContainer = styled.div`
-	  width: 100%;
-		max-width: 720px;
+const Container = styled.div`
+	  display: flex;
+		width: 100%;
 		margin: 0 auto;
-		padding: 0 20px;
+		padding: 70px 70px 45px 70px;
 `
 
 const HText = css`
 	display: flex;
-	font-family: Roboto;
+	font-family: 'Roboto';
+	font-style: normal;
 	font-weight: 900;
-	color: var(--pattern);
+	line-height: 71px;
+	color: var(--white);
+	width: auto;
+	height: max-content;
 `;
 
 const H1 = 	styled.h1`

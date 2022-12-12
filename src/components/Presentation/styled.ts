@@ -25,12 +25,12 @@ const localH1 = css`
   justify-content: center;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     font-size: 50px;
   }
 
-  @media (max-width: 305px) {
-    font-size: 45px;
+  @media (max-width: 300px) {
+    font-size: 25px;
   }
 `;
 
@@ -47,7 +47,7 @@ const localH2 = css`
   }
 
   @media (max-width: 305px) {
-    font-size: 20px !important;
+    font-size: 15px !important;
   }
 `;
 

@@ -38,7 +38,7 @@ export const Navbar = () => {
           <NavLink href="#Sobre" changeNavProps={changeNavProps}>{navbar.about}</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="#" changeNavProps={changeNavProps}>{navbar.services}</NavLink>
+          <NavLink href="#Services" changeNavProps={changeNavProps}>{navbar.services}</NavLink>
         </NavItem>
       </NavMenu>
       <NavBarToggler onClick={navBarTogglerClickHandler} changeNavProps={changeNavProps} togglerClick={togglerClick}>
