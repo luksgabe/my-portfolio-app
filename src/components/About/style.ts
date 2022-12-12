@@ -38,7 +38,7 @@ const ImageContainer = styled.div`
   display: flex;
   width: 30%;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-start;
   
   @media (max-width: 900px) {
     width: 40%;
@@ -86,6 +86,9 @@ const Content = styled.div`
     font-weight: 300;
     font-style: normal;
     font-family: 'Roboto';
+    @media (max-width: 300px) {
+    font-size: 12px;
+    }
   }
 
   @media (max-width: 900px) {
@@ -110,7 +113,13 @@ const H1 = styled(H1Template)`
     bottom: 0;
     border-bottom: 4px solid #E7F6F2;
     transition: all 0.3s ease-in-out;
+    @media (max-width: 900px) {
+      width: 60%;
     }
+    @media (max-width: 900px) {
+      width: 40%;
+    }
+  }
 
     @media (max-width: 900px) {
       width: 100%;
@@ -163,6 +172,9 @@ const GroupButtons = styled.div`
   justify-content: space-around;
 
   & > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #E7F6F2;
     font-family: 'Roboto';
     font-style: normal;
@@ -174,6 +186,11 @@ const GroupButtons = styled.div`
     border-radius: 10px;
     cursor: pointer;
     margin-bottom: 1rem;
+
+    & > svg {
+      display: flex;
+      margin: 0 0 9px -16px;
+    }
 
     @media (max-width: 1130px) {
       width: 30%;

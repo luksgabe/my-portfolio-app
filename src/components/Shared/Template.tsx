@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import { Main, Wrapper } from "../../styles/template";
 interface ITemplate {
-  children: Array<ReactElement>
+  children: Array<ReactElement> | ReactElement
 }
 
 

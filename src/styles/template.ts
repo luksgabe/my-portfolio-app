@@ -26,7 +26,7 @@ const Container = styled.div`
 	  display: flex;
 		width: 100%;
 		margin: 0 auto;
-		padding: 70px 45px 45px 45px;
+		padding: 70px 70px 45px 70px;
 `
 
 const HText = css`

@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
+import { Icon } from "../../../public/Icons";
 import { 
   AboutSection,
   Container,
@@ -60,8 +61,8 @@ export const About = () => {
           </Infos>
           <GroupButtons>
             <button style={{background: '#A5C9CA'}}>Download CV</button>
-            <button style={{background: '#0E76A8'}}>Linkedin</button>
-            <button style={{color:'#2C3333', background: '#868E96'}}>GitHub</button>
+            <button style={{background: '#0E76A8'}}>Linked<Icon name="inIcon"/></button>
+            <button style={{color:'#2C3333', background: '#868E96'}}>GitHub<Icon name="github"/></button>
           </GroupButtons>
         </Content>
       </Container>
