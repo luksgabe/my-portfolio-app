@@ -1,15 +1,16 @@
-import { H1, H2 } from "./style";
+import { H1, H2, TitleSubtitleContainer } from "./style";
 
 interface ITitleWithSubtitleProps {
   title: string;
   subTitle: string;
+  color?: string;
 }
 
-export default function TitleWithSubtitle({ title, subTitle }: ITitleWithSubtitleProps){
+export default function TitleWithSubtitle({ title, subTitle, color }: ITitleWithSubtitleProps){
   return (
-    <div>
-      <H1>{title}</H1>
-      <H2>{subTitle}</H2>
-    </div>
+    <TitleSubtitleContainer>
+      <H1 $colorValue={color}>{title}</H1>
+      <H2 $colorValue={color}>{subTitle}</H2>
+    </TitleSubtitleContainer>
   )
 }

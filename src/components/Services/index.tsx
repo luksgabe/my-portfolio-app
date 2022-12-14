@@ -48,8 +48,7 @@ export function Services () {
   
   const servicesConfig = {
     duration: 3000,
-    distance: '60px',
-    rotate: { x: 100, y: 100, z: 0 },
+    distance: '150%',
     origin: 'bottom',
   }
 
