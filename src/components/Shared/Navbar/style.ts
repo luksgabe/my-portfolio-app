@@ -37,7 +37,7 @@ const Navbar = styled.nav<NavProps>`
     background:  ${(props) => (props.changeNavProps ? '#E7F6F2' : 'rgba(0, 0, 0, 0.6)')};
     top: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     transition: all 0.3s ease-in-out;
 `;
 
@@ -81,6 +81,7 @@ const NavItem = styled.li`
   }
 `
 const NavLink = styled.a<NavProps>`
+  font-weight: 500;
   color: ${(props) => (props.changeNavProps ? '#2C3333' : '#E7F6F2')};
   transition: 0.5s ease;
   &:hover {

@@ -4,7 +4,7 @@ export interface IText {
     about: string,
     services: string,
     experiences: string,
-    contact: string
+    contact: string,
   }
   titles: {
     subtitleHome: string;

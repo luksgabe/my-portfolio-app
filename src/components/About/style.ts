@@ -116,7 +116,7 @@ const H1 = styled(H1Template)`
     @media (max-width: 900px) {
       width: 60%;
     }
-    @media (max-width: 900px) {
+    @media (max-width: 600px) {
       width: 40%;
     }
   }

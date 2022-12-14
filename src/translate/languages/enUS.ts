@@ -5,7 +5,7 @@ export const messages = {
       about: 'About',
       services: 'Services',
       experiences: 'Experiences',
-      Contact: 'Contact',
+      contact: 'Contact',
     },
     titles: {
       subtitleHome: 'Full Stack Developer',
