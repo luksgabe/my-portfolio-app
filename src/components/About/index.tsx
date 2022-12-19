@@ -57,23 +57,23 @@ export const About = () => {
       <Container>
         <H1>Sobre mim</H1>
         <ImageContainer>
-          <Img ref={imgRef} src="Images/lucas-dev.jpg" alt="foto do programador full stack"/>
+          <Img ref={imgRef} src="Images/dev-image.jpg" alt="foto do programador full stack"/>
         </ImageContainer>
         <Content ref={contentRef} >
-          <p>Formado em Análise e Desenvolvimento de Sistemas com experiência em programação web utilizando tecnologias .NET e front-end.
-            Apaixonado por tecnologia(desenvolvimento de software, Machine Learning, IoT, etc...), jogos digitais, cinema e futebol. De perfil investigativo e analítico.
-            Profissional com sede de conhecimento, sempre procurando as melhores práticas de desenvolvimento e novas tendências tecnológicas para a resolução de problemas com o
-            foco em sistemas web, sites institucionais e e-commerce.
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+             Iure necessitatibus odio esse deserunt? Magnam perspiciatis necessitatibus iusto quo 
+             nesciunt quia ipsum esse, 
+             id nostrum provident eius obcaecati laudantium exercitationem eum!
           </p>
           <Infos>
-            <span><strong>Nome</strong>: Lucas Gabriel</span>
-            <span><strong>Idade</strong>: 28</span>
-            <span><strong>Fone</strong>: (51)996880646</span>
-            <span><strong>Endereço</strong>: Av Protásio Alves 7355</span>
+            <span><strong>Nome</strong>: Jordan Eriksen</span>
+            <span><strong>Idade</strong>: 32</span>
+            <span><strong>Fone</strong>: (011)12490-4444</span>
+            <span><strong>Endereço</strong>: av example</span>
             <span><strong>Experiência</strong>: 6 anos</span>
             <span><strong>Freelancer</strong>: Disponivel</span>
-            <span><strong>Skype</strong>: luksgabe</span>
-            <span><strong>E-mail</strong>: llucasgabriel94@gmail.com</span>
+            <span><strong>Skype</strong>: jordK</span>
+            <span><strong>E-mail</strong>: jordamEriksen@yahoo.com</span>
           </Infos>
           <GroupButtons>
             <DownloadCVButton onClick={downloadCvFileHandle} value="download">Download CV</DownloadCVButton>

@@ -8,9 +8,9 @@ export const Contact = () => {
       <Container>
         <H1>Entre em contato</H1>
         <Content>
-          <span><strong>E-mail</strong>: llucasgabril94@gmail.com</span>
-          <span><strong>Whatsapp</strong>: +55(51)99688-0646</span>
-          <span><strong>Linkedin</strong>: <a href="https://www.linkedin.com/in/lucas-gabriel-07916b80/">in/lucas-gabriel-07916b80</a></span>
+          <span><strong>E-mail</strong>: jordamEriksen@yahoo.com</span>
+          <span><strong>Whatsapp</strong>: +55(011)12490-4444</span>
+          <span><strong>Linkedin</strong>: <a href="https://www.linkedin.com/in/jordam-Erikem-07916b80/">in/jordam-Erikem-07916b80</a></span>
         </Content>
       </Container>
     </ContactSection>

@@ -9,13 +9,13 @@ export const Experiences = () => {
   const jobExperienceList: JobExperience[] = [
     {
       id: 1,
-      companyName: "DBC Company",
+      companyName: "Microsoft",
       companyPosition: ".Net Full Stack",
-      date: "June 2017 - Dezember 2022",
+      date: "06/22 - 12/22",
       description: `
-      Trabalho no desenvolvimento do portal da vendedora, sistema que permite gerenciar recursos das lojas da Arezzo.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates quia, totam nostrum corrupti sint possimus in quasi quidem esse nihil, soluta eaque nesciunt vitae. Est vitae fugit quos atque quis!
       <br />
-      Tecnologias usadas:
+      Technologies used:
       <br />
       - .Net 5
       <br />
@@ -30,13 +30,13 @@ export const Experiences = () => {
     },
     {
       id: 2,
-      companyName: "DBC Company",
+      companyName: "Microsoft",
       companyPosition: ".Net Full Stack",
       date: "06/22 - 12/22",
       description: `
-      Trabalho no desenvolvimento do portal da vendedora, sistema que permite gerenciar recursos das lojas da Arezzo.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates quia, totam nostrum corrupti sint possimus in quasi quidem esse nihil, soluta eaque nesciunt vitae. Est vitae fugit quos atque quis!
       <br />
-      Tecnologias usadas:
+      Technologies used:
       <br />
       - .Net 5
       <br />
@@ -51,13 +51,13 @@ export const Experiences = () => {
     },
     {
       id: 3,
-      companyName: "DBC Company",
+      companyName: "Microsoft",
       companyPosition: ".Net Full Stack",
       date: "06/22 - 12/22",
       description: `
-      Trabalho no desenvolvimento do portal da vendedora, sistema que permite gerenciar recursos das lojas da Arezzo.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates quia, totam nostrum corrupti sint possimus in quasi quidem esse nihil, soluta eaque nesciunt vitae. Est vitae fugit quos atque quis!
       <br />
-      Tecnologias usadas:
+      Technologies used:
       <br />
       - .Net 5
       <br />
@@ -72,13 +72,13 @@ export const Experiences = () => {
     },
     {
       id: 4,
-      companyName: "DBC Company",
+      companyName: "Microsoft",
       companyPosition: ".Net Full Stack",
       date: "06/22 - 12/22",
       description: `
-      Trabalho no desenvolvimento do portal da vendedora, sistema que permite gerenciar recursos das lojas da Arezzo.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates quia, totam nostrum corrupti sint possimus in quasi quidem esse nihil, soluta eaque nesciunt vitae. Est vitae fugit quos atque quis!
       <br />
-      Tecnologias usadas:
+      Technologies used:
       <br />
       - .Net 5
       <br />
@@ -93,13 +93,13 @@ export const Experiences = () => {
     },
     {
       id: 5,
-      companyName: "DBC Company",
+      companyName: "Microsoft",
       companyPosition: ".Net Full Stack",
       date: "06/22 - 12/22",
       description: `
-      Trabalho no desenvolvimento do portal da vendedora, sistema que permite gerenciar recursos das lojas da Arezzo.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates quia, totam nostrum corrupti sint possimus in quasi quidem esse nihil, soluta eaque nesciunt vitae. Est vitae fugit quos atque quis!
       <br />
-      Tecnologias usadas:
+      Technologies used:
       <br />
       - .Net 5
       <br />
