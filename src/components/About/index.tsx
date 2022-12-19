@@ -4,11 +4,14 @@ import {
   AboutSection,
   Container,
   Content,
+  DownloadCVButton,
+  GitHubButton,
   GroupButtons,
   H1,
   ImageContainer, 
   Img,
-  Infos
+  Infos,
+  LinkedInButton
 } from "./style";
 
 export const About = () => {
@@ -36,8 +39,21 @@ export const About = () => {
     animate();
   }, []);
 
+  const downloadCvFileHandle = () => {
+    const element = document.createElement("a");
+    element.href =`${process.env.APP_HOST}/files/Curriculo-Lucas-Gabriel.pdf`;
+    element.download = "Currículo Lucas Gabriel.pdf";
+    document.body.appendChild(element);
+    element.click();
+  }
+
+  const linkedinPageHandler = () => window.location.assign('https://www.linkedin.com/in/lucas-gabriel-07916b80/');
+  
+  const githubPageHandler = () => window.location.assign('https://github.com/luksgabe');
+
+
   return (
-    <AboutSection id="Sobre">
+    <AboutSection id="About">
       <Container>
         <H1>Sobre mim</H1>
         <ImageContainer>
@@ -60,9 +76,9 @@ export const About = () => {
             <span><strong>E-mail</strong>: llucasgabriel94@gmail.com</span>
           </Infos>
           <GroupButtons>
-            <button style={{background: '#A5C9CA'}}>Download CV</button>
-            <button style={{background: '#0E76A8'}}>Linked<Icon name="inIcon"/></button>
-            <button style={{color:'#2C3333', background: '#868E96'}}>GitHub<Icon name="github"/></button>
+            <DownloadCVButton onClick={downloadCvFileHandle} value="download">Download CV</DownloadCVButton>
+            <LinkedInButton onClick={linkedinPageHandler}>Linked<Icon name="inIcon"/></LinkedInButton>
+            <GitHubButton onClick={githubPageHandler}>GitHub<Icon name="github"/></GitHubButton>
           </GroupButtons>
         </Content>
       </Container>

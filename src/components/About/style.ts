@@ -2,10 +2,6 @@ import styled, { css } from "styled-components";
 
 import { H1 as H1Template, Container as TemplateContainer } from "../../styles/template";
 
-interface ScrollProps {
-  scrollRevealEvent?: boolean;
-}
-
 export {
   AboutSection,
   Container,
@@ -14,14 +10,17 @@ export {
   Content,
   H1,
   Infos,
-  GroupButtons
+  GroupButtons,
+  DownloadCVButton,
+  LinkedInButton,
+  GitHubButton,
 }
 
 const AboutSection = styled.section`
   display: flex;
-  width:100%;
-  min-height:100vh;
-  background:#2C3333;
+  width: 100%;
+  min-height: 100vh;
+  background: #2C3333;
 `;
 
 const Container = styled(TemplateContainer)`
@@ -170,34 +169,47 @@ const GroupButtons = styled.div`
   width: 100%;
   padding-top: 1rem;
   justify-content: space-around;
+`;
 
-  & > button {
+const ButtonAbout = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #E7F6F2;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 567;
+  font-size: 18px;
+  line-height: 21px;
+  width: 230px;
+  height: 49px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+
+  & > svg {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #E7F6F2;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 567;
-    font-size: 18px;
-    line-height: 21px;
-    width: 230px;
-    height: 49px;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-bottom: 1rem;
-
-    & > svg {
-      display: flex;
-      margin: 0 0 9px -16px;
-    }
-
-    @media (max-width: 1130px) {
-      width: 30%;
-    }
-
-    @media (max-width: 900px) {
-      width: 100%;
-    }
+    margin: 0 0 9px -16px;
   }
+
+  @media (max-width: 1130px) {
+    width: 30%;
+  }
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
+`;
+
+const DownloadCVButton = styled(ButtonAbout)`
+  background: #A5C9CA;
+`;
+
+const LinkedInButton = styled(ButtonAbout)`
+  background: #0E76A8;
+`;
+
+const GitHubButton = styled(ButtonAbout)`
+  background: #868E96;
+  color: #2C3333;
 `;

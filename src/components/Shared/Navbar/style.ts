@@ -39,6 +39,10 @@ const Navbar = styled.nav<NavProps>`
     position: fixed;
     z-index: 5;
     transition: all 0.3s ease-in-out;
+
+    & .active {
+      font-weight: 700;
+    }
 `;
 
 const Logo = styled.a<NavProps>`
@@ -75,7 +79,16 @@ const NavMenu = styled.ul<NavProps>`
   }
 `;
 
-const NavItem = styled.li`
+const NavItem = styled.li<NavProps>`
+  & > a {
+    font-weight: 500;
+    color: ${(props) => (props.changeNavProps ? '#2C3333' : '#E7F6F2')};
+    transition: 0.5s ease;
+    cursor: pointer;
+    &:hover {
+      color: ${(props) => (props.changeNavProps ? '#395B64' : '#0088d2')};;
+    }
+  }
   @media (max-width: 768px) {
     margin: 16px 0;
   }
@@ -84,6 +97,7 @@ const NavLink = styled.a<NavProps>`
   font-weight: 500;
   color: ${(props) => (props.changeNavProps ? '#2C3333' : '#E7F6F2')};
   transition: 0.5s ease;
+  cursor: pointer;
   &:hover {
     color: ${(props) => (props.changeNavProps ? '#395B64' : '#0088d2')};;
   }
@@ -120,7 +134,4 @@ const NavBarToggler = styled.div<NavProps>`
       : ''
     ))}
   }
-`;
-
-
-
+`; 

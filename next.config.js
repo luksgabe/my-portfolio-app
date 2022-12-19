@@ -8,5 +8,8 @@ module.exports = {
   compiler: {
     styledComponents: true,
   },
+  env: {
+    APP_HOST: process.env.APP_HOST,
+  },
   ...nextConfig,
 }

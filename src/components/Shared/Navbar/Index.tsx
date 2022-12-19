@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useText } from "../../../contexts/TextContext";
 import { Logo, NavbaGlobalStyle, Navbar as NavbarContainer, NavBarToggler, NavItem, NavLink, NavMenu } from "./style";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 export const Navbar = () => {
   const { navbar } = useText();
@@ -31,20 +32,57 @@ export const Navbar = () => {
       <NavbaGlobalStyle />
       <Logo href="#" changeNavProps={changeNavProps}>Lucas Gabriel</Logo>
       <NavMenu changeNavProps={changeNavProps} togglerClick={togglerClick}>
-        <NavItem>
-          <NavLink href="#Home" changeNavProps={changeNavProps}>{navbar.home}</NavLink>
+        <NavItem changeNavProps={changeNavProps}>
+          {/* <NavLink href="#Home" changeNavProps={changeNavProps}>{navbar.home}</NavLink> */}
+          <Link
+            activeClass="active"
+            to="Home"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}>
+            {navbar.home}
+          </Link>
         </NavItem>
-        <NavItem>
-          <NavLink href="#Sobre" changeNavProps={changeNavProps}>{navbar.about}</NavLink>
+        <NavItem changeNavProps={changeNavProps}>
+        <Link
+            to="About"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}>
+            {navbar.about}
+          </Link>
         </NavItem>
-        <NavItem>
-          <NavLink href="#Services" changeNavProps={changeNavProps}>{navbar.services}</NavLink>
+        <NavItem changeNavProps={changeNavProps}>
+          <Link
+              to="Services"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}>
+              {navbar.services}
+            </Link>
         </NavItem>
-        <NavItem>
-          <NavLink href="#Experiences" changeNavProps={changeNavProps}>{navbar.experiences}</NavLink>
+        <NavItem changeNavProps={changeNavProps}>
+          <Link
+              to="Experiences"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}>
+              {navbar.experiences}
+          </Link>
         </NavItem>
-        <NavItem>
-          <NavLink href="#Contact" changeNavProps={changeNavProps}>{navbar.contact}</NavLink>
+        <NavItem changeNavProps={changeNavProps}>
+          <Link
+              to="Contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}>
+              {navbar.contact}
+          </Link>
         </NavItem>
       </NavMenu>
       <NavBarToggler onClick={navBarTogglerClickHandler} changeNavProps={changeNavProps} togglerClick={togglerClick}>
