@@ -33,8 +33,8 @@ Versão final do projeto: https://www.luksgabe.dev
 
 # 🛠️ Abrir e rodar o projeto
 
-Para executar o projeto, baixar e instalar node lts v-18.13 e pacote yarn
-Executar comando yarn, o projeto executará por padrão na porta 3000
+<p>Para executar o projeto, baixar e instalar node lts v-18.13 e pacote yarn</p>
+<p>Executar comando yarn, o projeto executará por padrão na porta 3000</p>
 
 
 
