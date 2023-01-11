@@ -16,8 +16,8 @@
 - `Funcionalidade 1`: Exibição de perfil do programador
 - `Funcionalidade 2`: Exibição das competências 
 - `Funcionalidade 3`: Exibição dos serviços
-- `Funcionalidade 3`: Exibição das experiências
-- `Funcionalidade 3`: Contato
+- `Funcionalidade 4`: Exibição das experiências
+- `Funcionalidade 5`: Exibição de Contato
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
