@@ -2,7 +2,40 @@
 
 <h1 align="center" > Meu portfólio app </h1>
 
+<h2> Descrição do projeto </h2>
+<p>
+  Um modelo de website construído por mim com o objetivo de estudo.
+</p>
+
 <p align="center">
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
 </p>
+
+# :hammer: Funcionalidades do projeto
+
+- `Funcionalidade 1`: Exibição de perfil do programador
+- `Funcionalidade 2`: Exibição das competências 
+- `Funcionalidade 3`: Exibição dos serviços
+- `Funcionalidade 3`: Exibição das experiências
+- `Funcionalidade 3`: Contato
+
+## ✔️ Técnicas e tecnologias utilizadas
+
+- ``Reactjs``
+- ``Nextjs``
+- ``Typescript``
+- ``Styled components``
+- ``Server Side Render (SSR)``
+
+# 📁 Acesso ao projeto
+
+Versão final do projeto: https://www.luksgabe.dev
+
+# 🛠️ Abrir e rodar o projeto
+
+Para executar o projeto, baixar e instalar node lts v-18.13 e pacote yarn
+Executar comando yarn, o projeto executará por padrão na porta 3000
+
+
+
 
