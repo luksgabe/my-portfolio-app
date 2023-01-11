@@ -30,7 +30,7 @@ export const Presentation = () => {
 
   return (
     <HomeParallax id="Home" title="Home Section" aria-label="Seção Inicial">
-      <H1 ref={h1Ref}>Lucas Gabriel</H1>
+      <H1 ref={h1Ref}>Jordan Eriksen</H1>
       <H2 ref={h2Ref}>{titles.subtitleHome}</H2>
     </HomeParallax>
 

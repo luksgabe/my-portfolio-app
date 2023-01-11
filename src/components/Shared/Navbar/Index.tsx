@@ -30,7 +30,7 @@ export const Navbar = () => {
   return (
     <NavbarContainer changeNavProps={changeNavProps}>
       <NavbaGlobalStyle />
-      <Logo href="#" changeNavProps={changeNavProps}>Lucas Gabriel</Logo>
+      <Logo href="#" changeNavProps={changeNavProps}>Jordan Eriksen</Logo>
       <NavMenu changeNavProps={changeNavProps} togglerClick={togglerClick}>
         <NavItem changeNavProps={changeNavProps}>
           {/* <NavLink href="#Home" changeNavProps={changeNavProps}>{navbar.home}</NavLink> */}

@@ -1,4 +1,6 @@
-import styled, { css } from "styled-components";
+import Image from "next/image";
+import styled from "styled-components";
+import { GlobalArea } from "../../styles/parallax";
 
 import { H1 as H1Template, Container as TemplateContainer } from "../../styles/template";
 
@@ -6,7 +8,7 @@ export {
   AboutSection,
   Container,
   ImageContainer,
-  Img,
+  ImageStyle,
   Content,
   H1,
   Infos,
@@ -21,6 +23,18 @@ const AboutSection = styled.section`
   width: 100%;
   min-height: 100vh;
   background: #2C3333;
+  
+  @media (max-width: 850px) and (max-height: 1180px) { //Ipad air
+    min-height: 65vh;
+  }
+
+  @media (max-width: 912px) and (max-height: 1368px) { //surface pro
+    min-height: 45vh;
+  }
+
+  @media (max-width: 1280px) and (max-height: 800px) { //nest hub max
+    min-height: 70vh;
+  }
 `;
 
 const Container = styled(TemplateContainer)`
@@ -28,8 +42,12 @@ const Container = styled(TemplateContainer)`
   flex-wrap: wrap; 
   width: 100%;
 
+  @media (max-width: 850px) and (max-height: 1180px) {
+    height: fit-content;
+  }
+
   @media (max-width: 600px) {
-    padding:70px 0 0 0 ;
+    padding: 0;
   }
 `;
 
@@ -38,7 +56,10 @@ const ImageContainer = styled.div`
   width: 30%;
   align-items: center;
   justify-content: flex-start;
-  
+  visibility: hidden;
+  box-sizing: content-box;
+  ${GlobalArea}
+
   @media (max-width: 900px) {
     width: 40%;
   }
@@ -46,20 +67,30 @@ const ImageContainer = styled.div`
   @media (max-width: 600px) {
     width: 100%;
     justify-content: center;
-    padding-top: 1rem;
+    height: 50vh;
+  }
+
+  @media (max-width: 500px) and (max-height: 915px) { /* IPhone XR */
+    height: 40vh;
+  }
+
+  @media (max-width: 400px) and (max-height: 740px) { /* IPhone SE */
+    height: 50vh;
   }
 `;
 
-const Img = styled.img`
-  display: flex;
-  width: 255px;
-  height: 285px;
-  border-radius:150px;
-  visibility: hidden;
+const ImageStyle = styled(Image) `
+  display: flex !important;
+  min-width: auto !important;
+  width: 15rem !important;
+  min-height: auto !important;
+  height: 300px !important;
+  border-radius: 50%;
+  
 
   @media (max-width: 300px) {
-    width: 70%;
-    height: auto;
+    width: 70% !important;
+    height: auto !important;
   }
 `;
 
@@ -68,11 +99,14 @@ const Content = styled.div`
   flex-direction: column;
   width: 70%;
   justify-content: center;
-  padding: 0px 0px 0px 20px;
-  visibility: hidden;
+  ${GlobalArea}
   
   @media (max-width: 600px) {
     width: 100% !important;
+  }
+
+  @media (max-width: 415px) {
+    padding: 0px 15px 0px 15px;
   }
 
   @media (max-width: 300px) {
@@ -82,12 +116,15 @@ const Content = styled.div`
   & > p {
     color: #E7F6F2;
     padding-top: 1rem;
+    padding-bottom: 1rem;
     font-weight: 300;
     font-style: normal;
     font-family: 'Roboto';
+    
     @media (max-width: 300px) {
-    font-size: 12px;
+      font-size: 12px;
     }
+
   }
 
   @media (max-width: 900px) {
@@ -120,7 +157,7 @@ const H1 = styled(H1Template)`
     }
   }
 
-    @media (max-width: 900px) {
+    @media (max-width: 950px) {
       width: 100%;
       justify-content: center;
       padding-left: 0;
@@ -129,6 +166,7 @@ const H1 = styled(H1Template)`
     @media (max-width: 300px) {
       font-size: 30px;
     }
+
 `;
 
 const Infos = styled.div`

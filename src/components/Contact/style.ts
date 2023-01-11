@@ -18,6 +18,10 @@ const ContactSection = styled.section`
   width: 100%;
   height: 80vh;
   background: #A5C9CA;
+
+  @media (max-width: 915px) { //alterar para 600 se der errado
+    height: 50vh;
+  }
 `;
 
 const Container = styled(TemplateContainer)`
@@ -26,8 +30,10 @@ const Container = styled(TemplateContainer)`
   width: 100%;
 
 
-  @media (max-width: 600px) {
-    padding:70px 0 0 0 ;
+  @media (max-width: 915px) { //alterar para 600 se der errado
+    padding: 0 15px 0 15px;
+    display: flex;
+    flex-direction: column;
   }
 `;
 
@@ -39,6 +45,10 @@ const Content = styled.div`
   font-size: 22px;
   font-weight: 400;
   color: #E7F6F2;
+
+  @media (max-width: 915px) { //alterar para 600 se der errado
+    padding-top: 3rem;
+  }
 
   @media (max-width: 350px) {
     font-size: 16px;

@@ -1,5 +1,4 @@
 
-import TitleWithSubtitle from "../Shared/TitleWithSubTitle/Index";
 import { ContactSection, Container, Content, H1 } from "./style";
 
 export const Contact = () => {

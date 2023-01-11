@@ -9,10 +9,11 @@ import {
   GroupButtons,
   H1,
   ImageContainer, 
-  Img,
+  ImageStyle, 
   Infos,
   LinkedInButton
 } from "./style";
+import devImage from '../../../public/Images/dev-image.jpg';
 
 export const About = () => {
   const imgConfig = {
@@ -41,8 +42,8 @@ export const About = () => {
 
   const downloadCvFileHandle = () => {
     const element = document.createElement("a");
-    element.href =`${process.env.APP_HOST}/files/Curriculo-Lucas-Gabriel.pdf`;
-    element.download = "Currículo Lucas Gabriel.pdf";
+    element.href =`${process.env.APP_HOST}/files/My-CV.pdf`;
+    element.download = "Currículo Fulano de tal.pdf";
     document.body.appendChild(element);
     element.click();
   }
@@ -56,8 +57,13 @@ export const About = () => {
     <AboutSection id="About">
       <Container>
         <H1>Sobre mim</H1>
-        <ImageContainer>
-          <Img ref={imgRef} src="Images/dev-image.jpg" alt="foto do programador full stack"/>
+        <ImageContainer ref={imgRef}>
+          <ImageStyle 
+            src={devImage} 
+            alt="foto do programador full stack" 
+            loading="lazy"
+            >
+          </ImageStyle>
         </ImageContainer>
         <Content ref={contentRef} >
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.

@@ -26,9 +26,8 @@ const Container = styled(TemplateContainer)`
   flex-wrap: wrap; 
   width: 100%;
 
-
   @media (max-width: 600px) {
-    padding:70px 0 0 0 ;
+    padding: 0;
   }
 `;
 
@@ -169,7 +168,8 @@ const TimeLineContent = styled.div`
 const TimeLineContentHeader = styled.div`
   display: flex;
   width: 100%;
-  height: 2rem;
+  height: auto;
+  min-height: 2rem;
   background: #395B64;
   color: #E7F6F2;
   border-top-right-radius: 6px;

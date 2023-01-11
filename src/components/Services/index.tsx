@@ -46,71 +46,54 @@ export function Services () {
     }
   ]
   
-  const servicesConfig = {
-    duration: 3000,
-    distance: '150%',
-    origin: 'bottom',
-  }
+  const isMobileVersion: boolean = useMediaQuery(920);
 
-  const isWideVersion: boolean = useMediaQuery(920);
-
-  const [services, setServices] = useState<Service[]>(listServices);
   const [descriptionText, setDescriptionText] = useState<string>();
-  const [titleText, setTitleText] = useState<string>();
-  const [isOpen, setIsOpen] = useState(false);
-  const [opacity, setOpacity] = useState(0);
+  const [services, setServices] = useState(listServices);
 
   const serviceRef = useRef(null);
+  const textRef = useRef(null);
+
+  const eventHoverHandler = (serviceId: number) => {
+    const currentServiceHover = listServices.find(s => s.id === serviceId);
+    setDescriptionText(currentServiceHover?.descriptionService);
+
+  }
+
+  SwiperCore.use([Navigation, Pagination]);
 
   useEffect(() => {
     async function animate() {
-      if(serviceRef.current) {
+      if(serviceRef.current && textRef.current) {
         const sr = (await import("scrollreveal")).default;
-        sr().reveal(serviceRef.current, servicesConfig);
+        const scrollEfectConfig = { duration: 3000,
+          distance: '150%',
+          origin: 'bottom'
+        }
+        sr().reveal(serviceRef.current, { rotate: { x: 20, y: 20, z: 20}, ...scrollEfectConfig});
+        sr().reveal(textRef.current, scrollEfectConfig);
       }
     }
     animate();
+    
   }, [])
 
+  const [realIndex, setRealIndex] = useState(0);
+  useEffect(() => {
+    eventHoverHandler(realIndex);
+  }, [realIndex])
 
-  const toggleModal = () => {
-    setOpacity(0);
-    setIsOpen(!isOpen);
-  }
-
-  const afterOpen = () => {
-    setTimeout(() => {
-      setOpacity(1);
-    }, 100);
-  }
-
-  const beforeClose = () => {
-    return new Promise((resolve) => {
-      setOpacity(0);
-      setTimeout(resolve, 300);
-    });
-  }
-
-  const eventHoverHandler = (serviceId: number) => {
-    const currentServiceHover = services.find(s => s.id === serviceId);
-    setDescriptionText(currentServiceHover?.descriptionService);
-
-    if(isWideVersion) {
-      setTitleText(currentServiceHover?.title);
-      toggleModal();
-    }
-  }
-  SwiperCore.use([Navigation, Pagination]);
 
   return (
+
     <ServiceSection id="Services">
       <Container>
-        <TitleWithSubtitle title={'O que eu faço'} subTitle={'Meus Serviços'} />
+        <TitleWithSubtitle title={'O que eu faço'} subTitle={'Meus serviços'} />
         {
-          !isWideVersion ? (
+          !isMobileVersion ? (
             <Content ref={serviceRef}>
               {
-                  services.map((service, index) => (
+                  services.map(service => (
                     <ServiceBox 
                       key={service.id} 
                       id={service.id}
@@ -124,10 +107,9 @@ export function Services () {
             </Content>
           )
           : (
-            <Content>
+            <Content ref={serviceRef}>
               <Swiper
                 effect={"coverflow"}
-                modules={[Navigation, Pagination]}
                 grabCursor={true}
                 centeredSlides={true}
                 slidesPerView={"auto"}
@@ -139,7 +121,11 @@ export function Services () {
                   modifier: 1,
                   slideShadows: false,
                 }}
-                pagination={{ clickable: true }}
+                onActiveIndexChange={(core) => { 
+                  const index = core.realIndex + 1;
+                  setRealIndex(index);
+                }}
+                pagination={{ clickable: true}}
                 navigation={true}
                 style={{display: 'flex', maxWidth: '500px', width: '100%'}}
               >        
@@ -160,31 +146,11 @@ export function Services () {
             </Content>           
           )
         }
-
-        {
-          !isWideVersion ?
-            (<TextContainer>
-              <p>{descriptionText}</p>
-            </TextContainer>)
-            : (<></>)
-        }
+        <TextContainer ref={textRef}>
+          <p>{descriptionText}</p>
+        </TextContainer>
         
       </Container>
-      <StyledModal
-        isOpen={isOpen}
-        afterOpen={afterOpen}
-        beforeClose={beforeClose}
-        onBackgroundClick={toggleModal}
-        onEscapeKeydown={toggleModal}
-        opacity={opacity}
-        backgroundProps={{ opacity }}>
-        <span>{titleText}</span>
-        <hr />
-        <div>
-          <p>{descriptionText}</p>
-        </div>
-        <button onClick={toggleModal}>Fechar</button>
-      </StyledModal>
     </ServiceSection>
   )
 }
